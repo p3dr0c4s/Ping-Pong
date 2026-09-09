@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ping Pong</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         MENU
+    ================================================== -->
+
+    <div id="menu" class="screen">
+
+        <h1>🏓 PING PONG</h1>
+
+        <p class="subtitle">
+            Prepare-se para descobrir quem manda nessa mesa.
+        </p>
+
+        <div class="difficulty-box">
+
+            <h2>Dificuldade</h2>
+
+            <div class="difficulty-buttons">
+
+                <button
+                    class="difficulty-button"
+                    data-difficulty="easy">
+                    Fácil
+                </button>
+
+                <button
+                    class="difficulty-button selected"
+                    data-difficulty="normal">
+                    Normal
+                </button>
+
+                <button
+                    class="difficulty-button"
+                    data-difficulty="hard">
+                    Difícil
+                </button>
+
+            </div>
+
+        </div>
+
+        <button id="startButton" class="main-button">
+            JOGAR
+        </button>
+
+    </div>
+
+
+    <!-- ==================================================
+         JOGO
+    ================================================== -->
+
+    <div id="game" class="screen hidden">
+
+        <div class="top-info">
+
+            <div class="player-info">
+
+                <span>VOCÊ</span>
+
+                <strong id="playerScore">
+                    0
+                </strong>
+
+                <small>
+                    SETS:
+                    <span id="playerSets">0</span>
+                </small>
+
+            </div>
+
+
+            <div class="match-info">
+
+                <h1>🏓</h1>
+
+                <span id="countdown"></span>
+
+            </div>
+
+
+            <div class="player-info">
+
+                <span>CPU</span>
+
+                <strong id="cpuScore">
+                    0
+                </strong>
+
+                <small>
+                    SETS:
+                    <span id="cpuSets">0</span>
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div id="pointMessage">
+            PONTO!
+        </div>
+
+
+        <canvas
+            id="gameCanvas"
+            width="800"
+            height="500">
+        </canvas>
+
+
+        <p class="instructions">
+            Use <strong>W</strong> e <strong>S</strong>
+            para mover sua raquete
+        </p>
+
+    </div>
+
+
+    <!-- ==================================================
+         FIM DA PARTIDA
+    ================================================== -->
+
+    <div id="gameOver" class="screen hidden">
+
+        <h1 id="winnerText">
+            VOCÊ VENCEU!
+        </h1>
+
+        <p id="finalScore">
+            2 - 0
+        </p>
+
+        <button id="restartButton" class="main-button">
+            JOGAR NOVAMENTE
+        </button>
+
+        <button id="menuButton" class="secondary-button">
+            MENU
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
